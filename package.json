@@ -1,0 +1,28 @@
+{
+  "name": "sockets-to-raspberry-node-server.git",
+  "version": "1.0.0",
+  "description": "server side (cloud) nodejs server running socketsio",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js 8080"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/learninghabits/sockets-to-raspberry-node-server.git"
+  },
+  "keywords": [
+    "nodejs",
+    "socketsio",
+    "raspberrypi"
+  ],
+  "author": "Tshepo Ntlhokoa (tshepo.ntlhokoa@gmail.com)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/learninghabits/sockets-to-raspberry-node-server/issues"
+  },
+  "homepage": "https://github.com/learninghabits/sockets-to-raspberry-node-server#readme",
+  "dependencies": {
+    "express": "^4.15.4",
+    "socketio": "^1.0.0"
+  }
+}
