@@ -1,5 +1,5 @@
 {
-  "name": "sockets-to-raspberry-node-server.git",
+  "name": "sockets-to-raspberry-node-server",
   "version": "1.0.0",
   "description": "server side (cloud) nodejs server running socketsio",
   "main": "server.js",

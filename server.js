@@ -42,3 +42,8 @@ http.listen(port, function () {
 	console.log("SERVER IS LISTENING ON PORT: " + port);
 	console.log("CTRL+C TO STOP ");
 });
+
+process.on('SIGINT', function () {	
+	console.log('BYE BYE, STOPPED GRACIOUSLY!');
+	process.exit();
+});
