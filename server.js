@@ -23,18 +23,14 @@ app.get('/device/off', function (request, response) {
 });
 
 app.get('/device/togglestate/:seconds', function (request, response) {
-	var seconds = request.query.Seconds || request.query.seconds;
+	var seconds = (request.query.Seconds || request.query.seconds) || (request.params.Seconds || request.params.seconds);
 	io.emit('ToggleState', { seconds: seconds });
 	response.status(200)
 		.send('OK');
 });
 
 app.get('*', function (req, res) {
-	res.send(
-		`This sockets server is ready for get requests:
-			/device/on
-			/device/off
-			/togglestate/:seconds`);
+	res.send("The socket server is ready for get comms ");
 });
 
 var port = process.argv.slice(2)[0] || (process.env.PORT || 80);
