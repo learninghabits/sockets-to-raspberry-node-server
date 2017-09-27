@@ -7,8 +7,18 @@ io.on('connection', function (socket) {
 	socket.on('disconnect', function () {
 		console.log('client disconnected with ID : ' + socket.id);
 	});
+	socket.on('pong', function(data){
+        console.log("Pong received from client");
+    });
 	console.log('client connected with ID : ' + socket.id);
 });
+
+function sendHeartbeat(){
+    setTimeout(sendHeartbeat, 8000);
+    io.sockets.emit('ping', { beat : 1 });
+}
+
+setTimeout(sendHeartbeat, 8000);
 
 app.get('/device/on', function (request, response) {
 	io.emit('SwitchOn');
